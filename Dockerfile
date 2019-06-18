@@ -16,7 +16,7 @@ RUN echo "mysql-server mysql-server/root_password_again password root" | debconf
 
 
 #Descargamos Wordpress
-ADD https://es.wordpress.org/wordpress-4.2.2-es_ES.zip /var/www/wordpress.zip #ADD nos permite añadir un archivo al contenedor, en este caso nos estamos bajando Wordpress
+ADD https://es.wordpress.org/wordpress-4.2.2-es_ES.zip /var/www/wordpress.zip 
 
 #Establecemos nuestro nuevo directorio home
 ENV HOME /var/www/html/
@@ -30,10 +30,10 @@ RUN unzip /var/www/wordpress.zip  -d /var/www/
 #Copiamos wordpress a /var/www/html
 RUN cp -r /var/www/wordpress/* /var/www/html/
 
-#Añadimos el script
+#AÃ±adimos el script
 ADD /script.sh /script.sh
 
-#Le damos permisos de ejecución
+#Le damos permisos de ejecuciÃ³n
 RUN chmod +x /script.sh
 
 #Lanzamos el script
