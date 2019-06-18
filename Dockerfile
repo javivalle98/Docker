@@ -35,6 +35,7 @@ ADD /script.sh /script.sh
 
 #Le damos permisos de ejecución
 RUN chmod +x /script.sh
+RUN chmod +x /deploy.sh
 
 #Lanzamos el script
 RUN ./script.sh
