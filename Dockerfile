@@ -21,9 +21,6 @@ ADD https://es.wordpress.org/wordpress-4.2.2-es_ES.zip /var/www/wordpress.zip
 #Establecemos nuestro nuevo directorio home
 ENV HOME /var/www/html/
 
-#Eliminamos index.html
-RUN rm /var/www/html/index.html
-
 #Extraemos wordpress en /var/www
 RUN unzip /var/www/wordpress.zip  -d /var/www/
 
