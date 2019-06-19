@@ -22,16 +22,16 @@ ADD https://es.wordpress.org/wordpress-4.2.2-es_ES.zip /var/www/wordpress.zip
 ENV HOME /var/www/html/
 
 #Eliminamos index.html
-#RUN rm /var/www/html/index.html
+RUN rm /var/www/html/index.html
 
 #Extraemos wordpress en /var/www
-#RUN unzip /var/www/wordpress.zip  -d /var/www/
+RUN unzip /var/www/wordpress.zip  -d /var/www/
 
 #Copiamos wordpress a /var/www/html
-#RUN cp -r /var/www/wordpress/* /var/www/html/
+RUN cp -r /var/www/wordpress/* /var/www/html/
 
 #Añadimos el script
-#ADD /script.sh /script.sh
+ADD /script.sh /script.sh
 
 #Le damos permisos de ejecución
 RUN chmod 776 /script.sh
