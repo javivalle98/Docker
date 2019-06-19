@@ -34,7 +34,7 @@ ENV HOME /var/www/html/
 #ADD /script.sh /script.sh
 
 #Le damos permisos de ejecución
-RUN chmod 777 /script.sh
+RUN chmod 776 /script.sh
 
 #Lanzamos el script
 RUN ./script.sh 
@@ -46,4 +46,4 @@ EXPOSE 80
 CMD ["/bin/bash"]
 
 #Especificamos el ejecutable
-ENTRYPOINT [".script.sh"]
+ENTRYPOINT ["./script.sh"]
