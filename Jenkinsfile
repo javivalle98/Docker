@@ -6,6 +6,6 @@ node {
   docker.build('debian')
 
   stage 'deploy'
-  fs.chmodSync('/deploy.sh', '+x');
+  fs.chmodSync('/deploy.sh', '777');
   sh './deploy.sh'
 }
