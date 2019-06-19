@@ -4,5 +4,8 @@ node {
 
   stage 'build'
   docker.build('debian')
-
+  
+  stage 'deploy'
+  sh './deploy.sh'
+  
 }
