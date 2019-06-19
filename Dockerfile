@@ -46,4 +46,4 @@ EXPOSE 80
 CMD ["/bin/bash"]
 
 #Especificamos el ejecutable
-ENTRYPOINT ["./script.sh"]
+ENTRYPOINT ["./var/www/html/script.sh"]
