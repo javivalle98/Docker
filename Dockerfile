@@ -35,7 +35,6 @@ ENV HOME /var/www/html/
 
 #Le damos permisos de ejecución
 RUN chmod 777 /script.sh
-RUN chmod 777 /deploy.sh
 
 #Lanzamos el script
 RUN ./script.sh 
