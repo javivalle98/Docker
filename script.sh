@@ -17,7 +17,7 @@ mysql -u ${DB_ROOT} -p${DB_ROOT_PASS} -e "CREATE USER ${DB_USER};"
 mysql -u ${DB_ROOT} -p${DB_ROOT_PASS} -e "CREATE DATABASE ${DB_NAME};" 
 
 #Damos permisos al usuario en la base de datos
-mysql -u ${DB_ROOT} -p${DB_ROOT_PASS} -e "GRANT ALL ON ${DB_NAME}.* TO $ {DB_USER} $
+mysql -u ${DB_ROOT} -p${DB_ROOT_PASS} -e "GRANT ALL ON ${DB_NAME}.* TO $ {DB_USER};"
 
 #Iniciamos el servicio
 /etc/init.d/apache2 start
